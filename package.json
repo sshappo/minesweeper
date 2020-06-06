@@ -4,30 +4,29 @@
   "description": "The game - minesweeper",
   "main": "index.js",
   "scripts": {
-    "run": "webpack-dev-server --mode development",
-    "build": "webpack --mode development"
+    "start": "webpack-dev-server --mode development",
+    "build:dev": "webpack --mode development",
+    "build:prod": "webpack --mode production"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sshappo/minesweeper.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sergey Shappo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sshappo/minesweeper/issues"
   },
   "homepage": "https://github.com/sshappo/minesweeper#readme",
   "devDependencies": {
-    "@babel/core": "^7.10.2",
-    "@babel/preset-env": "^7.10.2",
-    "@babel/preset-react": "^7.10.1",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
-    "@types/source-map": "^0.5.7",
-    "babel-loader": "^8.1.0",
+    "@types/webpack": "^4.41.17",
     "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.5.3",
     "html-webpack-plugin": "^4.3.0",
+    "style-loader": "^1.2.1",
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.5",
     "webpack": "^4.43.0",
