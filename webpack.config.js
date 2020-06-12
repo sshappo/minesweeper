@@ -21,7 +21,7 @@ module.exports = (env, {mode}) => {
         devtool,
         target: 'web',
         entry: {
-            index: './src/index.ts'
+            index: './src/index.tsx'
         },
         output: {
             path: PATHS.dist,
@@ -30,22 +30,29 @@ module.exports = (env, {mode}) => {
         module: {
             rules: [
                 {
-                    test: /\.ts$/,
+                    test: /\.tsx$/,
                     use: [
                         {
                             loader: 'ts-loader'
                         }
                     ],
                     exclude: /node_modules/
-                }
+                },
+                {
+                    test: /\.css$/i,
+                    exclude: /node_modules/,
+                    loader: 'style-loader',
+                },
+                {
+                    test: /\.css$/i,
+                    exclude: /node_modules/,
+                    loader: 'css-loader'
+                },
+
             ],
         },
         resolve: {
-            extensions: [ '.ts', '.js' ],
-        },
-        externals: {
-            "react": "React",
-            "react-dom": "ReactDOM"
+            extensions: ['.ts', '.tsx', '.js']
         },
         optimization: {
             splitChunks: {

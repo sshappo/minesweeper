@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
-    "sourceMap": true,
+    "outDir": "./dist",
+    "target": "es5",
+    "module": "es6",
+    "jsx": "react",
     "noImplicitAny": true,
-    "module": "commonjs",
-    "target": "es6",
-    "declaration": true,
-    "jsx": "react"
+    "allowSyntheticDefaultImports": true
   },
   "files": [
-    "src/index.ts"
+    "src/index.tsx",
+    "src/ParseMap.tsx",
+    "src/useWebsocket.tsx"
   ]
 }
